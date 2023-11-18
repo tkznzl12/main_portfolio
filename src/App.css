@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  padding: 0 10vw;
+  font-size: 1vw;
+}
+
+.page {
+  height: 100dvh;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.big-title {
+  font-family: "OAGothic-ExtraBold";
+  font-size: 3.5vw;
+}
+
+.bold-text {
+  font-family: "OAGothic-ExtraBold";
+}
+.detail-page {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -13,26 +37,15 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  .App {
+    padding: 0 5vw;
+    font-size: 4vw;
   }
-  to {
-    transform: rotate(360deg);
+  .detail-page {
+    width: 100%;
+  }
+  .big-title {
+    font-size: 10vw;
   }
 }
