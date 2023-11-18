@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { UseStateBoolean } from "../../data/type";
 import Slide from "./slide";
 import CloseBtn from "../../assets/img/closeBtn.svg";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 const Modal = styled.div`
   width: 100vw;
   height: 100dvh;

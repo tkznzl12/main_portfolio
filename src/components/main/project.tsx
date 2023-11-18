@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { projectData } from "../../data/arrayData";
 import Slide from "../common/slide";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ProjectModal } from "../common/projectModal";
 
 const ProjectTag = styled.div`
