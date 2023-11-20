@@ -14,6 +14,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"), // 빌드하면 dist폴더가 생기고 그 안에 번들링 결과물인 [app].js가 들어있다.
   },
   resolve: {
+    alias: {
+      gsap: path.resolve(__dirname, "node_modules/gsap"),
+    },
     extensions: [".jsx", ".js", ".tsx", ".ts"], // 웹팩에서 처리해주는 확장자들
   },
   module: {
