@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { WorkInfo } from "../../data/arrayData";
+import { Controller, Scene } from "react-scrollmagic";
 
 interface WorkData {
   companyName: string;
@@ -10,11 +11,16 @@ interface WorkData {
 }
 
 const WorkTag = styled.div`
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   .big-title {
     padding: 7vw;
+    background-color: #000000;
+  }
+  .scrollmagic-pin-spacer {
+    height: auto !important;
   }
 `;
 
@@ -100,41 +106,46 @@ const MainJobContent = styled.div`
 const Work = () => {
   return (
     <WorkTag>
-      <p className="big-title">WORK</p>
-      {WorkInfo.map((infoData: WorkData, index: number) => (
-        <WorkDetailBox>
-          <WorkDetailText id={`company${index}`}>
-            <p className="company-name bold-text">{infoData.companyName}</p>
-            <p className="content-period">
-              {infoData.period} ({infoData.career})
-            </p>
-            <p className="position">{infoData.position}</p>
-          </WorkDetailText>
-          <WorkDetailContent>
-            {infoData.mainJob.map((job, num) => (
-              <MainJobContent id={`c_${index}_p_${num}`}>
-                <p className="project-name bold-text">{job.projectName}</p>
-                <span>
-                  <p className="content-skill bold-text">{job.skill}</p>
-                </span>
-                {job.job.map((data: any, titleNum: number) => (
-                  <div id={`c_${index}_p_${num}_d_${titleNum}`}>
-                    <p className="title-job bold-text">{data.title}</p>
-                    {data.detail.map((text: string, textNum: number) => (
-                      <p
-                        className="content-job"
-                        id={`c_${index}_p_${num}_d_${titleNum}_t_${textNum}`}
-                      >
-                        - {text}
-                      </p>
-                    ))}
-                  </div>
-                ))}
-              </MainJobContent>
-            ))}
-          </WorkDetailContent>
-        </WorkDetailBox>
-      ))}
+      <Controller globalSceneOptions={{ triggerHook: "onLeave" }}>
+        <Scene pin>
+          <p className="big-title">WORK</p>
+        </Scene>
+
+        {WorkInfo.map((infoData: WorkData, index: number) => (
+          <WorkDetailBox>
+            <WorkDetailText id={`company${index}`}>
+              <p className="company-name bold-text">{infoData.companyName}</p>
+              <p className="content-period">
+                {infoData.period} ({infoData.career})
+              </p>
+              <p className="position">{infoData.position}</p>
+            </WorkDetailText>
+            <WorkDetailContent>
+              {infoData.mainJob.map((job, num) => (
+                <MainJobContent id={`c_${index}_p_${num}`}>
+                  <p className="project-name bold-text">{job.projectName}</p>
+                  <span>
+                    <p className="content-skill bold-text">{job.skill}</p>
+                  </span>
+                  {job.job.map((data: any, titleNum: number) => (
+                    <div id={`c_${index}_p_${num}_d_${titleNum}`}>
+                      <p className="title-job bold-text">{data.title}</p>
+                      {data.detail.map((text: string, textNum: number) => (
+                        <p
+                          className="content-job"
+                          id={`c_${index}_p_${num}_d_${titleNum}_t_${textNum}`}
+                        >
+                          - {text}
+                        </p>
+                      ))}
+                    </div>
+                  ))}
+                </MainJobContent>
+              ))}
+            </WorkDetailContent>
+          </WorkDetailBox>
+        ))}
+      </Controller>
     </WorkTag>
   );
 };

@@ -9,7 +9,12 @@ const ProjectTag = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 7vw;
+  background: #000000;
+  position: absolute;
+  z-index: 1;
   @media screen and (max-width: 768px) {
+    left: 0;
+    width: 100%;
     .slide-box {
       width: 75vw;
       margin: 0 auto;

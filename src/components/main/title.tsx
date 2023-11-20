@@ -9,9 +9,11 @@ const MainTitle = styled.div`
   align-items: center;
   min-height: 100dvh;
   max-height: 100dvh;
+  padding: 0 10vw;
   #leftSide {
     text-align: left;
     width: 50vw;
+    height: 50dvh;
     pre {
       font-size: 4vw;
       white-space: pre-line;

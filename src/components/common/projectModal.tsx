@@ -8,7 +8,7 @@ const Modal = styled.div`
   height: 100dvh;
   position: absolute;
   left: 0%;
-  z-index: 1;
+  z-index: 2;
   background-color: #000000;
 `;
 const ModalComponent = styled.div`
@@ -106,6 +106,10 @@ export const ProjectModal = ({
 
   useEffect(() => {
     bodycheck.style.overflowY = "hidden";
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
   }, []);
   return (
     <>

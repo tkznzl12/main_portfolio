@@ -6,13 +6,15 @@ const AboutMeTag = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 5vw;
-
+  width: 70%;
+  margin: 0 auto;
   .introduction {
     line-height: 2.5vw;
     font-size: 1.5vw;
   }
 
   @media screen and (max-width: 768px) {
+    width: 100%;
     .introduction {
       line-height: 6vw;
       font-size: 4vw;
@@ -26,6 +28,7 @@ const MyInfoBox = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     gap: 5vw;
+    padding: 0 5vw;
   }
 `;
 

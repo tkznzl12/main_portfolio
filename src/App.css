@@ -39,11 +39,12 @@ li {
 
 @media screen and (max-width: 768px) {
   .App {
-    padding: 0 5vw;
+    padding: 0;
     font-size: 4vw;
   }
   .detail-page {
     width: 100%;
+    padding: 0 5vw;
   }
   .big-title {
     font-size: 10vw;
