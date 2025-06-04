@@ -1,6 +1,45 @@
 //경력
 export const WorkInfo = [
   {
+    companyName: "신성ICT",
+    period: "2023.12 - 2024.10",
+    career: "9개월",
+    position: "개발팀 사원",
+    mainJob: [
+      {
+        projectName: "외주 사이트 프론트 작업",
+        skill:
+          "TypeScript, React, CSS, styled-components, swiper, react-chartjs-2, nivo...",
+        job: [
+          {
+            title: "원모바일",
+            detail: [
+              "메인 페이지 퍼블리싱 및 UI 구성",
+              "모달 컴포넌트 제작 및 사용자 인터랙션 구현",
+              "웰컴페이먼츠 연동을 통해 결제 컴포넌트 제작",
+              "휴대폰 상품 소개 및 구매 페이지 제작",
+            ],
+          },
+          {
+            title: "에이트리 인베스트먼트, 루카스 엔터테인먼트",
+            detail: ["사이트 전체 퍼블리싱 및 프론트엔드 개발"],
+          },
+          {
+            title: "더마당",
+            detail: ["콘서트 예매를 위한 결제 페이지 개발"],
+          },
+          {
+            title: "신성ICT 홈페이지",
+            detail: [
+              "연도 인터렉션 컴포넌트 작업",
+              "웹사이트 초기 레이아웃 작업",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
     companyName: "SAMLAB",
     period: "2021.04 - 2023.06",
     career: "2년 3개월",
